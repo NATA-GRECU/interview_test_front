@@ -1,0 +1,11 @@
+.center {
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+  }
+
+.bg-form {
+    background-color: aqua;
+    border-radius: 5px;
+}
