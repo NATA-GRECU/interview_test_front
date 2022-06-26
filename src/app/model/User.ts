@@ -6,5 +6,5 @@ export class User {
     public gender: string;
     public phone: string;
     public birthDate: Date;
-
+    public formatedBirthDate: String;
 }

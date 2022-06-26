@@ -1,12 +1,14 @@
-<div class="container">
-    <div class="center bg-form">
-        <form class="row g-3">
+<div class="container-fluid">
+    
+    <div class="justify-content-center d-flex align-items-center bg-form m-5 shadow-lg">
+        <form class="row g-3 p-4">
+            <h3 class="text-center nw-font">Register your User!</h3>
             <div class="col-md-6">
-                <label for="name" class="form-label">Name:</label>
+                <label for="name" class="form-label txt-b">Name:</label>
                 <input [(ngModel)]='user.name' type="text" name="name" class="form-control" id="name">
             </div>
-            <div class="col-md-6">
-                <p>Gender: </p>
+            <div class="col-md-6 ">
+                <p class="txt-b">Gender: </p>
                 <div class="form-check form-check-inline">
                     <input [(ngModel)]='user.gender' class="form-check-input" type="radio" name="gender" id="female" value="F">
                     <label class="form-check-label" for="inlineRadio1">Female</label>
@@ -17,26 +19,53 @@
                 </div>
                 <div class="form-check form-check-inline">
                     <input [(ngModel)]='user.gender' class="form-check-input" type="radio" name="gender" id="other" value="X">
-                    <label class="form-check-label" for="inlineRadio3">Other</label>
+                    <label class="form-check-label" for="inlineRadio3">Not identify</label>
                 </div>
             </div>
             <div class="col-md-12">
-                <label for="email" class="form-label">E-mail:</label>
+                <label for="email" class="form-label txt-b">E-mail:</label>
                 <input [(ngModel)]='user.email' type="email" name="email" class="form-control" id="email">
             </div>
             <div class="col-md-6">
-                <label for="phone" class="form-label">Phone:</label>
+                <label for="phone" class="form-label txt-b">Phone:</label>
                 <input [(ngModel)]='user.phone' name="phone" type="tel" class="form-control" id="inputAddress2" placeholder="Ex.: +5511972421293">
             </div>
 
             <div class="col-md-6">
-                <label for="birthDate" class="form-label">Your Birthday:</label>
+                <label for="birthDate" class="form-label txt-b">Your Birthday:</label>
                 <input [(ngModel)]='user.birthDate' name="birthDate" type="date" class="form-control" id="birthDate">
             </div>
             
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary w-100 pt-2" (click)='cadastrar()'>Register</button>
+            <div class="col-md-12 pb-4">
+                <button type="submit" routerLink="/user" class="btn btn-blue w-100 pt-2 nw-font shadow" (click)='cadastrar()'>REGISTER</button>
             </div>
         </form>
     </div>
+
+    <nav>
+        <div class="nav nav-tabs justify-content-center m-3" id="nav-tab" role="tablist">
+          <button class="nav-link active txt-b" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">All Users</button>
+        </div>
+    </nav>
+    <div class="tab-content m-5" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            <div class="row justify-content-center">            
+                <div class="col-md-3 mt-4"  *ngFor='let item of usersList'>
+                    <div id="#" class="card justify-content-between shadow-sm" style="width: 18em;">
+                        <div class="card-header text-center txt-b bg-card">
+                            {{ item.name }}
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">E-mail: {{ item.email }}</li>
+                            <li class="list-group-item">Birthday: {{ item.formatedBirthDate }}</li>
+                            <li class="list-group-item">Gender: {{ item.gender }}</li>
+                            <li class="list-group-item">Phone: {{ item.phone }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+
 </div>

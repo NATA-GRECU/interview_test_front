@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 .center {
     margin: auto;
     width: 50%;
@@ -6,6 +8,30 @@
   }
 
 .bg-form {
-    background-color: aqua;
+    background-color: #84afbe;
     border-radius: 5px;
+}
+
+.nw-font {
+  font-family: 'Staatliches', cursive;
+}
+
+.btn-blue {
+  background-color: #547e8c;
+  color: white;
+  box-shadow: 10px;
+  font-size: 15pt;
+}
+
+.btn-blue:hover{
+  background-color: #6c96a5;
+}
+
+.txt-b {
+  font-weight: bold;
+}
+
+.bg-card {
+  background-color: #547e8c;
+  color: rgb(237, 237, 237);
 }
