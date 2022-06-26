@@ -1,0 +1,23 @@
+.bg-blue {
+    background-color: #84afbe;
+}
+
+.social-network {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+
+.w-40 {
+    width: 40px;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.bg-dblue{
+    background-color: #547e8c;
+}
